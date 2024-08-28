@@ -38,4 +38,4 @@ jobs:
             docker pull ${{ secrets.DOCKER_USERNAME }}/pair-game
             docker stop pair-game || true
             docker rm pair-game || true
-            docker run -d --name pair-game -p 3010:3000 ${{ secrets.DOCKER_USERNAME }}/pair-game
+            docker run -d --name pair-game -p 3010:80 ${{ secrets.DOCKER_USERNAME }}/pair-game
